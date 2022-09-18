@@ -1,0 +1,46 @@
+Program Todo apps
+
+FUNCTION add_todos(todos)
+    PRINT "Want to add todo list? Type 1 if you want, 0 if you don't want"
+    READ AND WRITE "input" with boolean
+
+    WHILE "input"
+        DO
+        READ AND WRITE "add-todo" with string
+        STORE "todos" with "add-todo"
+        
+        PRINT "Want to add todo list? Type 1 if you want, 0 if you don't want"
+        READ AND WRITE "input" with boolean
+        
+        IF "input" = false
+            BREAK WHILE
+END FUNCTION
+
+WRITE "todos" with array
+
+add_todos(todos)
+
+WRITE "finished_todo" with array
+
+PRINT "Want to add finished todo? Type 1 if you want, 0 if you don't want"
+READ AND WRITE "input" with boolean
+
+WHILE "input"
+    DO
+    STORE "i" with 0
+
+    PRINT "Pick your finished todo by number"
+    READ AND WRITE "number" by number
+    STORE finished_todo[i] with todos[number-1]
+
+    PRINT "Want to add finished todo? Type 1 if you want, 0 if you don't want"
+    READ AND WRITE "input" with boolean
+    
+    ADD "i" by 1
+    
+    IF "input" = 0
+        PRINT "Thank you for using Todo List App"
+        BREAK WHILE
+
+    
+
